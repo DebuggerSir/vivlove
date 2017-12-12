@@ -1,0 +1,119 @@
+//
+//  PrefixHeader.pch
+//  vivlove
+//
+//  Created by Skyer God on 2017/12/11.
+//  Copyright © 2017年 Skyer God. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <SDAutoLayout.h>
+
+
+/** 默认字体配色*/
+#define defaultTitleColor UIColorFromRGB(0x1897ff)
+//------------------------- 快捷设置系统屏幕 宽高  ----------------------------------//
+#ifdef kScreenWidth
+#endif
+#ifndef kScreenWidth
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#endif
+
+#ifdef kScreenHeight
+#endif
+#ifndef kScreenHeight
+#define kScreenHeight  [UIScreen mainScreen].bounds.size.height
+#endif
+
+
+
+//RGB颜色
+#define RGBA(r, g, b, a)                    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+#define RGB(r, g, b)                        RGBA(r, g, b, 1.0f)
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16))/255.0 green:((CGFloat)((rgbValue & 0xFF00) >> 8))/255.0 blue:((CGFloat)(rgbValue & 0xFF))/255.0 alpha:1.0]
+//默认的控制器背景色
+#define DefaultVCBackColor RGBA(238, 238, 238, 1)
+// ----------------------- 版本控制  适配-----------------------
+#define autoScaleW(width) (kScreenWidth / 375 * width)
+#define autoScaleH(height)  (kScreenHeight / 667 * height)
+//根据UI标的像素直接 布局
+#define pxFontSize(fontSize)  autoScaleW((floor((fontSize) / 2.0f)) + 2)//autoScaleW((floor(fonSize)) / 96.0f * 72.0f)
+#define pxSizeW(width) autoScaleW((floor((width) / 2.0f)))
+#define pxSizeH(height) autoScaleW((floor((height) / 2.0f)))
+//iPhoneX 判断
+#define isPhoneX ([UIScreen mainScreen].bounds.size.width == 375 && [UIScreen mainScreen].bounds.size.height == 812)
+//导航栏高度
+#define NavigationBarHeight (isPhoneX ? 88 : 64)
+//tabbar高度
+#define TabBarHeight (isPhoneX ? 83 : 49)
+
+//-------  适配iOS11 -- vc.automaticallyAdjustsScrollViewInsets 废 弃 -------
+#define  adjustsScrollViewInsets_NO(scrollView,vc)\
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+if ([UIScrollView instancesRespondToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {\
+[scrollView   performSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:") withObject:@(2)];\
+} else {\
+vc.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+
+//------------------------- Log 输出控制 ----------------------------------//
+#ifdef DEBUG
+#define NULLSAFE_ENABLED 1
+#endif
+
+#ifdef DEBUG
+#define ZTString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define ZTLog(...) printf("%s 第%d行: %s\n\n", [ZTString UTF8String] ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+
+#else
+#define ZTLog(...)
+#endif
+#endif /* PrefixHeader_pch */
+//------------------------- 强弱引用转换 ----------------------------------//
+
+//------------------------- 强弱引用转换 ----------------------------------//
+//强弱引用转换
+#ifndef weakify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
+#endif
+
+#ifndef strongify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+#else
+#define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+#endif
+#endif
+
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		206F43BEB4D576300E50DE2F /* libPods-vivloveUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BCD7F310912508F62A527 /* libPods-vivloveUITests.a */; };
+		2EA1012402424864E8E6A170 /* libPods-vivlove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB1DD11BD9A1582632A4469 /* libPods-vivlove.a */; };
+		B70E3A3F1FDE691000F1AB03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B70E3A3E1FDE691000F1AB03 /* AppDelegate.m */; };
+		B70E3A451FDE691000F1AB03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70E3A431FDE691000F1AB03 /* Main.storyboard */; };
+		B70E3A471FDE691000F1AB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70E3A461FDE691000F1AB03 /* Assets.xcassets */; };
+		B70E3A4A1FDE691000F1AB03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70E3A481FDE691000F1AB03 /* LaunchScreen.storyboard */; };
+		B70E3A4D1FDE691000F1AB03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B70E3A4C1FDE691000F1AB03 /* main.m */; };
+		B70E3A571FDE691000F1AB03 /* vivloveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B70E3A561FDE691000F1AB03 /* vivloveTests.m */; };
+		B70E3A621FDE691000F1AB03 /* vivloveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B70E3A611FDE691000F1AB03 /* vivloveUITests.m */; };
+		B70E3A751FDE7DD800F1AB03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B70E3A741FDE7DD800F1AB03 /* ViewController.m */; };
+		B74F57BB1FDFA1A6004952DF /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57BA1FDFA1A6004952DF /* RootTabBarController.m */; };
+		B74F57BE1FDFB128004952DF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57BD1FDFB128004952DF /* BaseViewController.m */; };
+		B74F57C11FDFB152004952DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57C01FDFB152004952DF /* MainViewController.m */; };
+		B74F57C51FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57C41FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m */; };
+		B74F57C91FDFB45B004952DF /* LeftSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57C81FDFB45B004952DF /* LeftSlideView.m */; };
+		BE1D174D953AE6B8D68838F6 /* libPods-vivloveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9FB7CC054186D65704D4DB /* libPods-vivloveTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B70E3A531FDE691000F1AB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B70E3A321FDE691000F1AB03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B70E3A391FDE691000F1AB03;
+			remoteInfo = vivlove;
+		};
+		B70E3A5E1FDE691000F1AB03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B70E3A321FDE691000F1AB03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B70E3A391FDE691000F1AB03;
+			remoteInfo = vivlove;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A9FB7CC054186D65704D4DB /* libPods-vivloveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vivloveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		553C8D3765344CBAEAFDC757 /* Pods-vivloveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivloveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vivloveTests/Pods-vivloveTests.release.xcconfig"; sourceTree = "<group>"; };
+		86604A12CF9438DD5319D85C /* Pods-vivloveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivloveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vivloveTests/Pods-vivloveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90E10B273BE26A0EBF24330B /* Pods-vivlove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivlove.release.xcconfig"; path = "Pods/Target Support Files/Pods-vivlove/Pods-vivlove.release.xcconfig"; sourceTree = "<group>"; };
+		B70E3A3A1FDE691000F1AB03 /* vivlove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vivlove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70E3A3D1FDE691000F1AB03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B70E3A3E1FDE691000F1AB03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B70E3A441FDE691000F1AB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B70E3A461FDE691000F1AB03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B70E3A491FDE691000F1AB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B70E3A4B1FDE691000F1AB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70E3A4C1FDE691000F1AB03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B70E3A521FDE691000F1AB03 /* vivloveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vivloveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70E3A561FDE691000F1AB03 /* vivloveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vivloveTests.m; sourceTree = "<group>"; };
+		B70E3A581FDE691000F1AB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70E3A5D1FDE691000F1AB03 /* vivloveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vivloveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70E3A611FDE691000F1AB03 /* vivloveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vivloveUITests.m; sourceTree = "<group>"; };
+		B70E3A631FDE691000F1AB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70E3A721FDE6BC100F1AB03 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B70E3A731FDE7DD800F1AB03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B70E3A741FDE7DD800F1AB03 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B74F57B91FDFA1A6004952DF /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		B74F57BA1FDFA1A6004952DF /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		B74F57BC1FDFB128004952DF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		B74F57BD1FDFB128004952DF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B74F57BF1FDFB152004952DF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B74F57C01FDFB152004952DF /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		B74F57C31FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		B74F57C41FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		B74F57C71FDFB45B004952DF /* LeftSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSlideView.h; sourceTree = "<group>"; };
+		B74F57C81FDFB45B004952DF /* LeftSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSlideView.m; sourceTree = "<group>"; };
+		BE4BACF80B29E749D386DCEE /* Pods-vivloveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivloveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vivloveUITests/Pods-vivloveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C73BCD7F310912508F62A527 /* libPods-vivloveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vivloveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD4BF1DFD1469EBEA4273E9 /* Pods-vivlove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivlove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vivlove/Pods-vivlove.debug.xcconfig"; sourceTree = "<group>"; };
+		F1A68A39EBFF28A7D395FF1E /* Pods-vivloveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivloveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vivloveUITests/Pods-vivloveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBB1DD11BD9A1582632A4469 /* libPods-vivlove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vivlove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B70E3A371FDE691000F1AB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA1012402424864E8E6A170 /* libPods-vivlove.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70E3A4F1FDE691000F1AB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE1D174D953AE6B8D68838F6 /* libPods-vivloveTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70E3A5A1FDE691000F1AB03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206F43BEB4D576300E50DE2F /* libPods-vivloveUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B274F444B6571AA135E8241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBB1DD11BD9A1582632A4469 /* libPods-vivlove.a */,
+				0A9FB7CC054186D65704D4DB /* libPods-vivloveTests.a */,
+				C73BCD7F310912508F62A527 /* libPods-vivloveUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B70E3A311FDE691000F1AB03 = {
+			isa = PBXGroup;
+			children = (
+				B70E3A3C1FDE691000F1AB03 /* vivlove */,
+				B70E3A551FDE691000F1AB03 /* vivloveTests */,
+				B70E3A601FDE691000F1AB03 /* vivloveUITests */,
+				B70E3A3B1FDE691000F1AB03 /* Products */,
+				F56DD8A28A873E4FF2D6D825 /* Pods */,
+				6B274F444B6571AA135E8241 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B70E3A3B1FDE691000F1AB03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B70E3A3A1FDE691000F1AB03 /* vivlove.app */,
+				B70E3A521FDE691000F1AB03 /* vivloveTests.xctest */,
+				B70E3A5D1FDE691000F1AB03 /* vivloveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B70E3A3C1FDE691000F1AB03 /* vivlove */ = {
+			isa = PBXGroup;
+			children = (
+				B70E3A3D1FDE691000F1AB03 /* AppDelegate.h */,
+				B70E3A3E1FDE691000F1AB03 /* AppDelegate.m */,
+				B70E3A731FDE7DD800F1AB03 /* ViewController.h */,
+				B70E3A741FDE7DD800F1AB03 /* ViewController.m */,
+				B74F57B91FDFA1A6004952DF /* RootTabBarController.h */,
+				B74F57BA1FDFA1A6004952DF /* RootTabBarController.m */,
+				B74F57BC1FDFB128004952DF /* BaseViewController.h */,
+				B74F57BD1FDFB128004952DF /* BaseViewController.m */,
+				B74F57BF1FDFB152004952DF /* MainViewController.h */,
+				B74F57C01FDFB152004952DF /* MainViewController.m */,
+				B74F57C61FDFB432004952DF /* CustomeView */,
+				B74F57C21FDFB1AE004952DF /* FDFullscreenPopGesture */,
+				B70E3A431FDE691000F1AB03 /* Main.storyboard */,
+				B70E3A461FDE691000F1AB03 /* Assets.xcassets */,
+				B70E3A481FDE691000F1AB03 /* LaunchScreen.storyboard */,
+				B70E3A4B1FDE691000F1AB03 /* Info.plist */,
+				B70E3A4C1FDE691000F1AB03 /* main.m */,
+				B70E3A721FDE6BC100F1AB03 /* PrefixHeader.pch */,
+			);
+			path = vivlove;
+			sourceTree = "<group>";
+		};
+		B70E3A551FDE691000F1AB03 /* vivloveTests */ = {
+			isa = PBXGroup;
+			children = (
+				B70E3A561FDE691000F1AB03 /* vivloveTests.m */,
+				B70E3A581FDE691000F1AB03 /* Info.plist */,
+			);
+			path = vivloveTests;
+			sourceTree = "<group>";
+		};
+		B70E3A601FDE691000F1AB03 /* vivloveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B70E3A611FDE691000F1AB03 /* vivloveUITests.m */,
+				B70E3A631FDE691000F1AB03 /* Info.plist */,
+			);
+			path = vivloveUITests;
+			sourceTree = "<group>";
+		};
+		B74F57C21FDFB1AE004952DF /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				B74F57C31FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.h */,
+				B74F57C41FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		B74F57C61FDFB432004952DF /* CustomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B74F57C71FDFB45B004952DF /* LeftSlideView.h */,
+				B74F57C81FDFB45B004952DF /* LeftSlideView.m */,
+			);
+			path = CustomeView;
+			sourceTree = "<group>";
+		};
+		F56DD8A28A873E4FF2D6D825 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAD4BF1DFD1469EBEA4273E9 /* Pods-vivlove.debug.xcconfig */,
+				90E10B273BE26A0EBF24330B /* Pods-vivlove.release.xcconfig */,
+				86604A12CF9438DD5319D85C /* Pods-vivloveTests.debug.xcconfig */,
+				553C8D3765344CBAEAFDC757 /* Pods-vivloveTests.release.xcconfig */,
+				F1A68A39EBFF28A7D395FF1E /* Pods-vivloveUITests.debug.xcconfig */,
+				BE4BACF80B29E749D386DCEE /* Pods-vivloveUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B70E3A391FDE691000F1AB03 /* vivlove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70E3A661FDE691000F1AB03 /* Build configuration list for PBXNativeTarget "vivlove" */;
+			buildPhases = (
+				8ACE47C23F2154C09E981A51 /* [CP] Check Pods Manifest.lock */,
+				B70E3A361FDE691000F1AB03 /* Sources */,
+				B70E3A371FDE691000F1AB03 /* Frameworks */,
+				B70E3A381FDE691000F1AB03 /* Resources */,
+				7F885D40A9FAF21D62EC0D59 /* [CP] Embed Pods Frameworks */,
+				E2E64265D3697BDE0F0EC80A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vivlove;
+			productName = vivlove;
+			productReference = B70E3A3A1FDE691000F1AB03 /* vivlove.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B70E3A511FDE691000F1AB03 /* vivloveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70E3A691FDE691000F1AB03 /* Build configuration list for PBXNativeTarget "vivloveTests" */;
+			buildPhases = (
+				4DC8B426FA04C2456C216FBA /* [CP] Check Pods Manifest.lock */,
+				B70E3A4E1FDE691000F1AB03 /* Sources */,
+				B70E3A4F1FDE691000F1AB03 /* Frameworks */,
+				B70E3A501FDE691000F1AB03 /* Resources */,
+				D8617F46AF770B085E9953F4 /* [CP] Embed Pods Frameworks */,
+				6BC541E77C8E7B19FD8C2CC6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B70E3A541FDE691000F1AB03 /* PBXTargetDependency */,
+			);
+			name = vivloveTests;
+			productName = vivloveTests;
+			productReference = B70E3A521FDE691000F1AB03 /* vivloveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B70E3A5C1FDE691000F1AB03 /* vivloveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70E3A6C1FDE691000F1AB03 /* Build configuration list for PBXNativeTarget "vivloveUITests" */;
+			buildPhases = (
+				C0711A24DCB1EF51060AB7F5 /* [CP] Check Pods Manifest.lock */,
+				B70E3A591FDE691000F1AB03 /* Sources */,
+				B70E3A5A1FDE691000F1AB03 /* Frameworks */,
+				B70E3A5B1FDE691000F1AB03 /* Resources */,
+				9918E49B23CECF71D0C47665 /* [CP] Embed Pods Frameworks */,
+				068F8DB41D14F2BBE4AAB1E1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B70E3A5F1FDE691000F1AB03 /* PBXTargetDependency */,
+			);
+			name = vivloveUITests;
+			productName = vivloveUITests;
+			productReference = B70E3A5D1FDE691000F1AB03 /* vivloveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B70E3A321FDE691000F1AB03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Skyer God";
+				TargetAttributes = {
+					B70E3A391FDE691000F1AB03 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B70E3A511FDE691000F1AB03 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B70E3A391FDE691000F1AB03;
+					};
+					B70E3A5C1FDE691000F1AB03 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B70E3A391FDE691000F1AB03;
+					};
+				};
+			};
+			buildConfigurationList = B70E3A351FDE691000F1AB03 /* Build configuration list for PBXProject "vivlove" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B70E3A311FDE691000F1AB03;
+			productRefGroup = B70E3A3B1FDE691000F1AB03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B70E3A391FDE691000F1AB03 /* vivlove */,
+				B70E3A511FDE691000F1AB03 /* vivloveTests */,
+				B70E3A5C1FDE691000F1AB03 /* vivloveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B70E3A381FDE691000F1AB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70E3A4A1FDE691000F1AB03 /* LaunchScreen.storyboard in Resources */,
+				B70E3A471FDE691000F1AB03 /* Assets.xcassets in Resources */,
+				B70E3A451FDE691000F1AB03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70E3A501FDE691000F1AB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70E3A5B1FDE691000F1AB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		068F8DB41D14F2BBE4AAB1E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vivloveUITests/Pods-vivloveUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DC8B426FA04C2456C216FBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vivloveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BC541E77C8E7B19FD8C2CC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vivloveTests/Pods-vivloveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F885D40A9FAF21D62EC0D59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vivlove/Pods-vivlove-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ACE47C23F2154C09E981A51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vivlove-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9918E49B23CECF71D0C47665 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vivloveUITests/Pods-vivloveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0711A24DCB1EF51060AB7F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vivloveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8617F46AF770B085E9953F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vivloveTests/Pods-vivloveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E64265D3697BDE0F0EC80A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vivlove/Pods-vivlove-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B70E3A361FDE691000F1AB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70E3A751FDE7DD800F1AB03 /* ViewController.m in Sources */,
+				B74F57C91FDFB45B004952DF /* LeftSlideView.m in Sources */,
+				B74F57C11FDFB152004952DF /* MainViewController.m in Sources */,
+				B74F57BE1FDFB128004952DF /* BaseViewController.m in Sources */,
+				B74F57BB1FDFA1A6004952DF /* RootTabBarController.m in Sources */,
+				B70E3A4D1FDE691000F1AB03 /* main.m in Sources */,
+				B74F57C51FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				B70E3A3F1FDE691000F1AB03 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70E3A4E1FDE691000F1AB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70E3A571FDE691000F1AB03 /* vivloveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B70E3A591FDE691000F1AB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70E3A621FDE691000F1AB03 /* vivloveUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B70E3A541FDE691000F1AB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B70E3A391FDE691000F1AB03 /* vivlove */;
+			targetProxy = B70E3A531FDE691000F1AB03 /* PBXContainerItemProxy */;
+		};
+		B70E3A5F1FDE691000F1AB03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B70E3A391FDE691000F1AB03 /* vivlove */;
+			targetProxy = B70E3A5E1FDE691000F1AB03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B70E3A431FDE691000F1AB03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B70E3A441FDE691000F1AB03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B70E3A481FDE691000F1AB03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B70E3A491FDE691000F1AB03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B70E3A641FDE691000F1AB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B70E3A651FDE691000F1AB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B70E3A671FDE691000F1AB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAD4BF1DFD1469EBEA4273E9 /* Pods-vivlove.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5W9P5K58;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/vivlove/PrefixHeader.pch";
+				INFOPLIST_FILE = vivlove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivlove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B70E3A681FDE691000F1AB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E10B273BE26A0EBF24330B /* Pods-vivlove.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5W9P5K58;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/vivlove/PrefixHeader.pch";
+				INFOPLIST_FILE = vivlove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivlove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B70E3A6A1FDE691000F1AB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86604A12CF9438DD5319D85C /* Pods-vivloveTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5W9P5K58;
+				INFOPLIST_FILE = vivloveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivloveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vivlove.app/vivlove";
+			};
+			name = Debug;
+		};
+		B70E3A6B1FDE691000F1AB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553C8D3765344CBAEAFDC757 /* Pods-vivloveTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5W9P5K58;
+				INFOPLIST_FILE = vivloveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivloveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vivlove.app/vivlove";
+			};
+			name = Release;
+		};
+		B70E3A6D1FDE691000F1AB03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1A68A39EBFF28A7D395FF1E /* Pods-vivloveUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5W9P5K58;
+				INFOPLIST_FILE = vivloveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivloveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vivlove;
+			};
+			name = Debug;
+		};
+		B70E3A6E1FDE691000F1AB03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE4BACF80B29E749D386DCEE /* Pods-vivloveUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5W9P5K58;
+				INFOPLIST_FILE = vivloveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivloveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vivlove;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B70E3A351FDE691000F1AB03 /* Build configuration list for PBXProject "vivlove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70E3A641FDE691000F1AB03 /* Debug */,
+				B70E3A651FDE691000F1AB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B70E3A661FDE691000F1AB03 /* Build configuration list for PBXNativeTarget "vivlove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70E3A671FDE691000F1AB03 /* Debug */,
+				B70E3A681FDE691000F1AB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B70E3A691FDE691000F1AB03 /* Build configuration list for PBXNativeTarget "vivloveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70E3A6A1FDE691000F1AB03 /* Debug */,
+				B70E3A6B1FDE691000F1AB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B70E3A6C1FDE691000F1AB03 /* Build configuration list for PBXNativeTarget "vivloveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B70E3A6D1FDE691000F1AB03 /* Debug */,
+				B70E3A6E1FDE691000F1AB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B70E3A321FDE691000F1AB03 /* Project object */;
+}
