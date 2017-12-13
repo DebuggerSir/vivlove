@@ -7,6 +7,7 @@
 //
 
 #import "LeftSlideView.h"
+
 #define selfOffset 170
 #define selfWidth (kScreenWidth - selfOffset)
 @interface LeftSlideView ()<UITableViewDelegate, UITableViewDataSource>
@@ -42,6 +43,7 @@
         _tableV.backgroundColor = RGBA(82, 93, 144, 1);
         _tableV.delegate = self;
         _tableV.dataSource = self;
+        _tableV.tableFooterView = [UIView new];
         [self addSubview:_tableV];
     }
     return _tableV;
@@ -106,8 +108,10 @@
     
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-
+    [self hiddenView];
+}
 - (void)showView{
     self.hidden = NO;
     self.frame = CGRectMake(-selfWidth, 0, selfWidth, kScreenHeight);
@@ -116,6 +120,8 @@
         
     } completion:^(BOOL finished) {
         self.frame = CGRectMake(0, 0, selfWidth, kScreenHeight);
+        self.hidden = NO;
+        self.maskView.hidden = NO;
     }];
 }
 
@@ -127,6 +133,7 @@
     } completion:^(BOOL finished) {
         if (finished) {
             self.hidden = YES;
+            self.maskView.hidden = YES;
         }
     }];
 }

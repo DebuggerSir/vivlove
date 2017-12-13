@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E299AD7CEAE9F5B70C4825C7CB8EFEA"
+               BlueprintIdentifier = "1AB62DA65152ABAFBECDD09C9458EA13"
                BuildableName = "libSDAutoLayout.a"
                BlueprintName = "SDAutoLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E299AD7CEAE9F5B70C4825C7CB8EFEA"
+            BlueprintIdentifier = "1AB62DA65152ABAFBECDD09C9458EA13"
             BuildableName = "libSDAutoLayout.a"
             BlueprintName = "SDAutoLayout"
             ReferencedContainer = "container:Pods.xcodeproj">

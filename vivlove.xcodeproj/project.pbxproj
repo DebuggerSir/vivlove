@@ -22,6 +22,7 @@
 		B74F57C11FDFB152004952DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57C01FDFB152004952DF /* MainViewController.m */; };
 		B74F57C51FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57C41FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m */; };
 		B74F57C91FDFB45B004952DF /* LeftSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57C81FDFB45B004952DF /* LeftSlideView.m */; };
+		B74F57CF1FE124CE004952DF /* ZTAssetHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57CE1FE124CE004952DF /* ZTAssetHandleTool.m */; };
 		BE1D174D953AE6B8D68838F6 /* libPods-vivloveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9FB7CC054186D65704D4DB /* libPods-vivloveTests.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		B74F57C41FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		B74F57C71FDFB45B004952DF /* LeftSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSlideView.h; sourceTree = "<group>"; };
 		B74F57C81FDFB45B004952DF /* LeftSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSlideView.m; sourceTree = "<group>"; };
+		B74F57CD1FE124CE004952DF /* ZTAssetHandleTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTAssetHandleTool.h; sourceTree = "<group>"; };
+		B74F57CE1FE124CE004952DF /* ZTAssetHandleTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTAssetHandleTool.m; sourceTree = "<group>"; };
 		BE4BACF80B29E749D386DCEE /* Pods-vivloveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivloveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vivloveUITests/Pods-vivloveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C73BCD7F310912508F62A527 /* libPods-vivloveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vivloveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD4BF1DFD1469EBEA4273E9 /* Pods-vivlove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivlove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vivlove/Pods-vivlove.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				B74F57BD1FDFB128004952DF /* BaseViewController.m */,
 				B74F57BF1FDFB152004952DF /* MainViewController.h */,
 				B74F57C01FDFB152004952DF /* MainViewController.m */,
+				B74F57CD1FE124CE004952DF /* ZTAssetHandleTool.h */,
+				B74F57CE1FE124CE004952DF /* ZTAssetHandleTool.m */,
 				B74F57C61FDFB432004952DF /* CustomeView */,
 				B74F57C21FDFB1AE004952DF /* FDFullscreenPopGesture */,
 				B70E3A431FDE691000F1AB03 /* Main.storyboard */,
@@ -488,9 +493,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-vivlove/Pods-vivlove-resources.sh",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -510,6 +518,7 @@
 				B74F57BE1FDFB128004952DF /* BaseViewController.m in Sources */,
 				B74F57BB1FDFA1A6004952DF /* RootTabBarController.m in Sources */,
 				B70E3A4D1FDE691000F1AB03 /* main.m in Sources */,
+				B74F57CF1FE124CE004952DF /* ZTAssetHandleTool.m in Sources */,
 				B74F57C51FDFB1AE004952DF /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				B70E3A3F1FDE691000F1AB03 /* AppDelegate.m in Sources */,
 			);
@@ -679,7 +688,7 @@
 				DEVELOPMENT_TEAM = BC5W9P5K58;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/vivlove/PrefixHeader.pch";
 				INFOPLIST_FILE = vivlove/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivlove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -696,7 +705,7 @@
 				DEVELOPMENT_TEAM = BC5W9P5K58;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/vivlove/PrefixHeader.pch";
 				INFOPLIST_FILE = vivlove/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vivlove.vivlove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
