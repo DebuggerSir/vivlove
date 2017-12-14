@@ -8,6 +8,7 @@ target 'vivlove' do
   # Pods for vivlove
 pod 'SDAutoLayout', '~> 2.2.0'
 pod 'TZImagePickerController', '~> 1.9.6'
+pod 'ZFPlayer', '~> 2.1.5'
   target 'vivloveTests' do
     inherit! :search_paths
     # Pods for testing

@@ -17,6 +17,7 @@
 #import "ZTAssetHandleTool.h"
 #import "CoreDataManage.h"
 #import "Video+CoreDataProperties.h"
+#import "ZTFilesManager.h"
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource, TZImagePickerControllerDelegate>
 @property (nonatomic, strong) UITableView *tableV;
 @end
@@ -86,9 +87,11 @@
                         [ZTAssetHandleTool getVideoFromPHAsset:phAsset needMetaData:YES Complete:^(NSData *fileData, NSString *fileName, NSString *filePath, PHAssetResource *pHAssetResource) {
                             ZTLog(@"%@", pHAssetResource);
                             [CoreDataManage inserDataWith_CoredatamodelClass:[Video class] CoredataModel:^(Video *model) {
-                                model.fileData = fileData;
-                                model.fileName = fileName;
+                                NSString *fileUrl = [ZTFilesManager createLibraryPathWithExtension:[NSString stringWithFormat:@"Video/%@", fileName]];
+                                [model.fileData writeToFile:fileUrl atomically:YES];
                                 model.filePath = filePath;
+                                model.fileUrl = fileUrl;
+                                model.fileName = fileName;
                                 model.coverImage = photos[idx];
                             } Error:^(NSError *error) {
                                 
@@ -135,14 +138,17 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cells"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cells"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"cells"];
     }
 //   TZAssetModel *model = [TZAssetModel modelWithAsset:sourcesArr[indexPath.row] type:TZAssetModelMediaTypeVideo];
 //    [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
 //        cell.imageView.image = photo;
 //    }];
     Video *model = sourcesArr[indexPath.row];
-    cell.imageView.image = model.coverImage;
+    cell.imageView.image = (UIImage *)model.coverImage;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = model.fileName;
+    cell.detailTextLabel.text = model.fileUrl;
     return cell;
 }
 - (void)lookupVideoInfo{
@@ -151,7 +157,7 @@
         [self.tableV reloadData];
         if (coredataModelArr.count > 0) {
             Video *model = coredataModelArr[0];
-            ZTLog(@"%@,\n path - %@ \n data - %@", model.fileName, model.filePath, model.fileData);
+            ZTLog(@"%@,\n path - %@ \n data - %@", model.fileName, model.filePath, model.fileUrl);
         }
     } Error:^(NSError *error) {
         

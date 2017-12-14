@@ -521,6 +521,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-vivlove/Pods-vivlove-resources.sh",
 				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
