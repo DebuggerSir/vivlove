@@ -15,6 +15,8 @@
 #import <TZAssetModel.h>
 #import <TZVideoPlayerController.h>
 #import "ZTAssetHandleTool.h"
+#import "CoreDataManage.h"
+#import "Video+CoreDataProperties.h"
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource, TZImagePickerControllerDelegate>
 @property (nonatomic, strong) UITableView *tableV;
 @end
@@ -79,9 +81,21 @@
             imagePicker.allowPickingImage = NO;
             [[TZImageManager manager] setPhotoWidth:100];
             [imagePicker setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
-                if (assets) {
-                    sourcesArr = [NSMutableArray arrayWithArray:assets];
-                    [self.tableV reloadData];
+                if (assets.count > 0) {
+                    [assets enumerateObjectsUsingBlock:^(id  _Nonnull phAsset, NSUInteger idx, BOOL * _Nonnull stop) {
+                        [ZTAssetHandleTool getVideoFromPHAsset:phAsset needMetaData:YES Complete:^(NSData *fileData, NSString *fileName, NSString *filePath, PHAssetResource *pHAssetResource) {
+                            ZTLog(@"%@", pHAssetResource);
+                            [CoreDataManage inserDataWith_CoredatamodelClass:[Video class] CoredataModel:^(Video *model) {
+                                model.fileData = fileData;
+                                model.fileName = fileName;
+                                model.filePath = filePath;
+                                model.coverImage = photos[idx];
+                            } Error:^(NSError *error) {
+                                
+                            }];
+                        }];
+                    }];
+                    [self lookupVideoInfo];
                 }
             }];
             [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:imagePicker animated:YES completion:^{
@@ -103,10 +117,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[CoreDataManage shareCoreDataDB] createCoredataDB:@"CoreDataModel"];
     
     [self createBottomBarView];
     
-
+    [self lookupVideoInfo];
+    
+    
     
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -120,16 +137,24 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cells"];
     }
-   TZAssetModel *model = [TZAssetModel modelWithAsset:sourcesArr[indexPath.row] type:TZAssetModelMediaTypeVideo];
-    [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        cell.imageView.image = photo;
-    }];
-    
+//   TZAssetModel *model = [TZAssetModel modelWithAsset:sourcesArr[indexPath.row] type:TZAssetModelMediaTypeVideo];
+//    [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+//        cell.imageView.image = photo;
+//    }];
+    Video *model = sourcesArr[indexPath.row];
+    cell.imageView.image = model.coverImage;
     return cell;
 }
-- (void)lookupVideoInfo:(PHAsset *)phAsset{
-    [ZTAssetHandleTool getVideoFromPHAsset:phAsset needMetaData:YES Complete:^(NSData *fileData, NSString *fileName, NSString *filePath, PHAssetResource *pHAssetResource) {
-        ZTLog(@"%@", pHAssetResource);
+- (void)lookupVideoInfo{
+    [CoreDataManage selectDataWith_CoredatamoldeClass:[Video class] where:nil Alldata_arr:^(NSArray *coredataModelArr) {
+        sourcesArr = [NSMutableArray arrayWithArray:coredataModelArr];
+        [self.tableV reloadData];
+        if (coredataModelArr.count > 0) {
+            Video *model = coredataModelArr[0];
+            ZTLog(@"%@,\n path - %@ \n data - %@", model.fileName, model.filePath, model.fileData);
+        }
+    } Error:^(NSError *error) {
+        
     }];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -137,7 +162,7 @@
 //    TZVideoPlayerController *vc = [[TZVideoPlayerController alloc] init];
 //    vc.model = model;
 //    [self presentViewController:vc animated:YES completion:nil];
-    [self lookupVideoInfo:model.asset];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
