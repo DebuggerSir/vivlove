@@ -70,7 +70,7 @@
                                                              } else {
                                                                  
                                                                  if (needMetaData) {
-                                                                      NSData *data = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:PATH_MOVIE_FILE]];
+                                                                     NSData *data = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:PATH_MOVIE_FILE]];
                                                                      result(data, fileName, PATH_MOVIE_FILE, resource);
                                                                  } else {
                                                                      result(nil, fileName, PATH_MOVIE_FILE, resource);

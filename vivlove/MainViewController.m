@@ -18,6 +18,8 @@
 #import "CoreDataManage.h"
 #import "Video+CoreDataProperties.h"
 #import "ZTFilesManager.h"
+#import <ZFPlayer.h>
+#import "MovieViewController.h"
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource, TZImagePickerControllerDelegate>
 @property (nonatomic, strong) UITableView *tableV;
 @end
@@ -62,7 +64,7 @@
         UIBarButtonItem *buton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:imagesArr[i]] style:UIBarButtonItemStyleDone target:self action:@selector(buttonClick:)];
         buton.tag = 200 + i;
         if (i == 0) {
-            buton.imageInsets = UIEdgeInsetsMake(0, 0, 0, buttonWidth - 40);
+//            buton.imageInsets = UIEdgeInsetsMake(0, 0, 0, buttonWidth - 40);
         }
         [buton setWidth:buttonWidth];
         [buttonArr addObject:buton];
@@ -86,16 +88,27 @@
                     [assets enumerateObjectsUsingBlock:^(id  _Nonnull phAsset, NSUInteger idx, BOOL * _Nonnull stop) {
                         [ZTAssetHandleTool getVideoFromPHAsset:phAsset needMetaData:YES Complete:^(NSData *fileData, NSString *fileName, NSString *filePath, PHAssetResource *pHAssetResource) {
                             ZTLog(@"%@", pHAssetResource);
-                            [CoreDataManage inserDataWith_CoredatamodelClass:[Video class] CoredataModel:^(Video *model) {
-                                NSString *fileUrl = [ZTFilesManager createLibraryPathWithExtension:[NSString stringWithFormat:@"Video/%@", fileName]];
-                                [model.fileData writeToFile:fileUrl atomically:YES];
-                                model.filePath = filePath;
-                                model.fileUrl = fileUrl;
-                                model.fileName = fileName;
-                                model.coverImage = photos[idx];
-                            } Error:^(NSError *error) {
-                                
-                            }];
+                            NSString *fileUrl = [ZTFilesManager createDocumentPathWithDirctory:@"Video" fileName:fileName];
+                            if (fileUrl) {
+                                [CoreDataManage inserDataWith_CoredatamodelClass:[Video class] CoredataModel:^(Video *model) {
+                                    NSError *error = nil;
+                                    if ([fileData writeToFile:fileUrl options:NSDataWritingAtomic error:&error]) {
+                                        ZTLog(@"%@", fileUrl);
+                                        model.filePath = filePath;
+                                        model.fileUrl = fileUrl;
+                                        model.fileName = fileName;
+                                        model.coverImage = photos[idx];
+                                        
+                                    } else {
+                                        ZTLog(@"%@", error.userInfo);
+                                    }
+                                    
+                                } Error:^(NSError *error) {
+                                    if (error.userInfo) {
+                                        [ZTFilesManager alerShow:@"加入数据库失败" info:error.userInfo];
+                                    }
+                                }];
+                            }
                         }];
                     }];
                     [self lookupVideoInfo];
@@ -138,7 +151,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cells"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"cells"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cells"];
     }
 //   TZAssetModel *model = [TZAssetModel modelWithAsset:sourcesArr[indexPath.row] type:TZAssetModelMediaTypeVideo];
 //    [[TZImageManager manager] getPhotoWithAsset:model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
@@ -146,7 +159,6 @@
 //    }];
     Video *model = sourcesArr[indexPath.row];
     cell.imageView.image = (UIImage *)model.coverImage;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = model.fileName;
     cell.detailTextLabel.text = model.fileUrl;
     return cell;
@@ -164,10 +176,19 @@
     }];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    TZAssetModel *model = [TZAssetModel modelWithAsset:sourcesArr[indexPath.row] type:TZAssetModelMediaTypeVideo];
+//    TZAssetModel *model = [TZAssetModel modelWithAsset:sourcesArr[indexPath.row] type:TZAssetModelMediaTypeVideo];
 //    TZVideoPlayerController *vc = [[TZVideoPlayerController alloc] init];
 //    vc.model = model;
 //    [self presentViewController:vc animated:YES completion:nil];
+    
+    Video *model = sourcesArr[indexPath.row];
+    
+    MovieViewController *movieVC = [[MovieViewController alloc] initWithNibName:NSStringFromClass([MovieViewController class]) bundle:nil];
+    movieVC.videoModel = model;
+    [self presentViewController:movieVC animated:YES completion:^{
+        
+    }];
+    
 
 }
 - (void)didReceiveMemoryWarning {

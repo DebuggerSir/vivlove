@@ -27,6 +27,8 @@
 		B74F57EB1FE22075004952DF /* CoreDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57E91FE22075004952DF /* CoreDataManage.m */; };
 		B74F57EE1FE22095004952DF /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B74F57EC1FE22095004952DF /* CoreDataModel.xcdatamodeld */; };
 		B74F57F11FE273E9004952DF /* ZTFilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B74F57F01FE273E9004952DF /* ZTFilesManager.m */; };
+		B776C38C1FE3606C00EA1758 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B776C38A1FE3606C00EA1758 /* MovieViewController.m */; };
+		B776C38D1FE3606C00EA1758 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B776C38B1FE3606C00EA1758 /* MovieViewController.xib */; };
 		BE1D174D953AE6B8D68838F6 /* libPods-vivloveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9FB7CC054186D65704D4DB /* libPods-vivloveTests.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,9 @@
 		B74F57ED1FE22095004952DF /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		B74F57EF1FE273E9004952DF /* ZTFilesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTFilesManager.h; sourceTree = "<group>"; };
 		B74F57F01FE273E9004952DF /* ZTFilesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTFilesManager.m; sourceTree = "<group>"; };
+		B776C3891FE3606C00EA1758 /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		B776C38A1FE3606C00EA1758 /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		B776C38B1FE3606C00EA1758 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		BE4BACF80B29E749D386DCEE /* Pods-vivloveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivloveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vivloveUITests/Pods-vivloveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C73BCD7F310912508F62A527 /* libPods-vivloveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vivloveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD4BF1DFD1469EBEA4273E9 /* Pods-vivlove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivlove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vivlove/Pods-vivlove.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +173,9 @@
 				B74F57BD1FDFB128004952DF /* BaseViewController.m */,
 				B74F57BF1FDFB152004952DF /* MainViewController.h */,
 				B74F57C01FDFB152004952DF /* MainViewController.m */,
+				B776C3891FE3606C00EA1758 /* MovieViewController.h */,
+				B776C38A1FE3606C00EA1758 /* MovieViewController.m */,
+				B776C38B1FE3606C00EA1758 /* MovieViewController.xib */,
 				B74F57CD1FE124CE004952DF /* ZTAssetHandleTool.h */,
 				B74F57CE1FE124CE004952DF /* ZTAssetHandleTool.m */,
 				B74F57EF1FE273E9004952DF /* ZTFilesManager.h */,
@@ -364,6 +372,7 @@
 				B70E3A4A1FDE691000F1AB03 /* LaunchScreen.storyboard in Resources */,
 				B70E3A471FDE691000F1AB03 /* Assets.xcassets in Resources */,
 				B70E3A451FDE691000F1AB03 /* Main.storyboard in Resources */,
+				B776C38D1FE3606C00EA1758 /* MovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +551,7 @@
 				B70E3A751FDE7DD800F1AB03 /* ViewController.m in Sources */,
 				B74F57C91FDFB45B004952DF /* LeftSlideView.m in Sources */,
 				B74F57EE1FE22095004952DF /* CoreDataModel.xcdatamodeld in Sources */,
+				B776C38C1FE3606C00EA1758 /* MovieViewController.m in Sources */,
 				B74F57C11FDFB152004952DF /* MainViewController.m in Sources */,
 				B74F57BE1FDFB128004952DF /* BaseViewController.m in Sources */,
 				B74F57BB1FDFA1A6004952DF /* RootTabBarController.m in Sources */,

@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface ZTFilesManager : NSObject
-+(NSString *)createDocumentPathWithExtension:(NSString *)documentName;
-+(NSString *)createLibraryPathWithExtension:(NSString *)libraryName;
-+(NSString *)createCachesPathWithExtension:(NSString *)cachesName;
-+(NSString *)createTempPathWithExtension:(NSString *)tempName;
-
++(NSString *)createDocumentPathWithDirctory:(NSString *)dirctory fileName:(NSString *)fileName;
++(NSString *)createLibraryPathWithDirctory:(NSString *)dirctory fileName:(NSString *)fileName;
++(NSString *)createCachesPathWithDirctory:(NSString *)dirctory fileName:(NSString *)fileName;
++(NSString *)createTempPathWithDirctory:(NSString *)dirctory fileName:(NSString *)fileName;
++ (void)alerShow:(NSString *)title info:(id )info;
 
 @end

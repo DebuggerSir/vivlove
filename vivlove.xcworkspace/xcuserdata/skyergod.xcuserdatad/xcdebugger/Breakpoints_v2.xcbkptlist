@@ -19,46 +19,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZVideoPlayerController.m"
-            timestampString = "534845266.307908"
+            filePath = "vivlove/ZTAssetHandleTool.m"
+            timestampString = "535019277.139193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-configMoviePlayer"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "+getVideoFromPHAsset:needMetaData:Complete:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__44-[TZVideoPlayerController configMoviePlayer]_block_invoke.49"
-                  moduleName = "vivlove"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/skyergod/Desktop/%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/vivlove/Pods/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZVideoPlayerController.m"
-                  timestampString = "534953423.406582"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "100">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__44-[TZVideoPlayerController configMoviePlayer]_block_invoke_2"
-                  moduleName = "vivlove"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/skyergod/Desktop/%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/vivlove/Pods/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZVideoPlayerController.m"
-                  timestampString = "534953423.408026"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
